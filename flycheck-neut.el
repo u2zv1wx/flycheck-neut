@@ -9,8 +9,7 @@
 
 (flycheck-define-checker neut
   "A syntax checker fon Neut using the compiler."
-  ;; :command ("neut check --no-color --end-of-entry EOE" source-inplace) ;; inplace must be used to handle relative include
-  :command ("neut" "check" "--no-color" "--end-of-entry" "EOE" source-inplace) ;; inplace must be used to handle relative include
+  :command ("neut" "check" "--no-color" "--end-of-entry" "EOE" source-inplace)
   :error-patterns
   ((info line-start (file-name) ":" line ":" column ":" (? "\r") "\n"
          "note: " (message (minimal-match (one-or-more anything))) (? "\r") "\n"
