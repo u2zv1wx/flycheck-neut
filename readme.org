@@ -24,3 +24,5 @@ with the following =init.el=:
 
 ;; ...
 #+END_SRC
+
+Note that this package won't work without [[https://github.com/u2zv1wx/neut-mode][neut-mode]].
