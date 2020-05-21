@@ -1,0 +1,26 @@
+#+TITLE: flycheck-neut
+Flycheck integration for Neut.
+
+* Installation
+A possible scenario:
+#+BEGIN_SRC shell
+$ git clone https://github.com/u2zv1wx/flycheck-neut path/to/some/dir
+$ mkdir -p ~/.emacs.d/site-lisp
+$ ln -s ~/.emacs.d/site-lisp/flycheck-neut.el path/to/some/dir/flycheck-neut.el
+#+END_SRC
+with the following =init.el=:
+#+BEGIN_SRC elisp
+;; ...
+
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
+
+(autoload 'flycheck-neut "flycheck-neut" nil t)
+
+(require 'flycheck-neut)
+
+(add-hook neut-mode-hook
+          (lambda () (interactive)
+            (add-to-list 'flycheck-checkers 'neut)))
+
+;; ...
+#+END_SRC
