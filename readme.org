@@ -8,10 +8,8 @@ $ git clone https://github.com/u2zv1wx/flycheck-neut path/to/some/dir
 $ mkdir -p ~/.emacs.d/site-lisp
 $ ln -s path/to/some/dir/flycheck-neut.el ~/.emacs.d/site-lisp/flycheck-neut.el
 #+END_SRC
-with the following =init.el=:
+with the following code in your =init.el=:
 #+BEGIN_SRC elisp
-;; ...
-
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 (autoload 'flycheck-neut "flycheck-neut" nil t)
@@ -21,8 +19,6 @@ with the following =init.el=:
 (add-hook neut-mode-hook
           (lambda () (interactive)
             (add-to-list 'flycheck-checkers 'neut)))
-
-;; ...
 #+END_SRC
 
 Note that this package won't work without [[https://github.com/u2zv1wx/neut-mode][neut-mode]].
