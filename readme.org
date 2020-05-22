@@ -6,7 +6,7 @@ A possible scenario:
 #+BEGIN_SRC shell
 $ git clone https://github.com/u2zv1wx/flycheck-neut path/to/some/dir
 $ mkdir -p ~/.emacs.d/site-lisp
-$ ln -s ~/.emacs.d/site-lisp/flycheck-neut.el path/to/some/dir/flycheck-neut.el
+$ ln -s path/to/some/dir/flycheck-neut.el ~/.emacs.d/site-lisp/flycheck-neut.el
 #+END_SRC
 with the following =init.el=:
 #+BEGIN_SRC elisp
